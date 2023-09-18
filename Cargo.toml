@@ -1,0 +1,17 @@
+[package]
+name = "rust_python_sandwich"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1"
+pyo3 = { version = "0.19", features = ["auto-initialize"] }
+rand = "0.8"
+
+# --- OO ---
+[profile.release]
+lto = true
+strip = true
+codegen-units = 1
